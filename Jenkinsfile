@@ -9,10 +9,10 @@ pipeline {
     stages {
         stage("Checkout") {
             steps {     
-                library(identifier: "openshift-pipeline-library@master", 
+                library(identifier: "openshift-pipeline-library@Dvl", 
                         retriever: modernSCM([$class: "GitSCMSource",
                                               credentialsId: "dev-repository-credentials",
-                                              remote: "ssh://git@github.com/leandroberetta/openshift-cicd-demo.git"]))                
+                                              remote: "https://github.com/arunharan/openshift-cicd-demo.git"]))                
                 
                 initParameters() 
                 
